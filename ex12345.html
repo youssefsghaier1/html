@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+   
+</head>
+<body>
+    <header>
+        <!-- <img src="esprit jpg.jpg" alt="Header Image" width="500" height="500"> -->
+        </header>
+    <fieldset>
+        <legend>Inscription</legend>
+        <form action="mailto:contact@esprit.tn" method="post" enctype="text/plain">
+            <br>
+            <label for="nom">Nom:</label>
+
+            <input type="tex" id="nom" name="nom" required>
+            <br>
+
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom" required>
+<br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+
+            <label for="telephone">Téléphone:</label>
+            <input type="tel" id="telephone" name="telephone" pattern="[0-9]{8}" required>
+<br>
+            <label for="dateNaissance">Date de naissance:</label>
+            <input type="date" id="dateNaissance" name="dateNaissance" required>
+<br>
+            <label for="motDePasse">Mot de passe:</label>
+            <input type="password" id="motDePase" name="motDePasse" pattern=".{8,}" title="8 characters minimum" required>
+<br>
+            <input type="submit" value="S'inscrire">
+        </form>
+        <p>Vous pouvez nous contacter par email : <a href="mailto:contact@esprit.tn">contact@esprit.tn</a></p>
+        <p>Adresse : Ghazela, Tunis</p>
+    </fieldset>
+    <script>
+alert("hello");
+function calcul (x,y){
+    var pi=3.14;
+    if  (x>0)
+    return(x+y)*pi;
+    else
+    return (y)*pi;
+}
+function entierAleatoire(min, max) {
+return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function verif()
+{
+    var numberr = entierAleatoire(0,10);
+    console.log(numberr);
+    var nbut=prompt("entrer le votre nombre");
+    var nb=0;
+
+    while( nb<3 && nbut!=numberr )
+    {nb++;}
+    return (nb<3)
+}
+verif();
+ /*
+        const ch1 = "abc";
+        const ch2 = "de";
+
+        const resultat = [];
+
+    for (let i = 0; i < ch1.length; i++) {
+        for (let j = 0; j < ch2.length; j++) {
+            resultat.push(ch1[i] + ch2[j]);
+            }
+}
+
+console.log(resultat);
+        */
+       // Définir le tableau
+  /*  const T = [17, 38, 10, 25, 72];
+    T.sort((a, b) => a - b);
+    T.push(12);
+    T.reverse();
+    const indc=T.indexOf(17);
+    const inda=T.indexOf(38);
+    
+    T.splice(inda,1);
+    const soustab=T.slice(1,3 +1);
+    console.log(T);
+    console.log(indc);
+    console.log(soustab); 
+*/
+/*function entierAleatoire(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}const chiffreAleatoire = entierAleatoire(0, 10);
+const nombreEssaisMax = 3;
+for (let essai = 1; essai <= nombreEssaisMax; essai++) {
+
+  const guess = parseInt(prompt(Essai ${essai}/${nombreEssaisMax}. Devinez le chiffre entre 0 et 10:));
+
+  if (guess === chiffreAleatoire) {
+    alert("Félicitations ! Vous avez deviné correctement.");
+    break;
+  } else {
+    const indice = guess < chiffreAleatoire ? "Trop bas." : "Trop haut.";
+    alert(Incorrect. ${indice});
+  }
+
+  if (essai === nombreEssaisMax) {
+    alert(Désolé, vous avez épuisé tous vos essais. Le chiffre correct était ${chiffreAleatoire}.);
+  }
+}*/
+
+
+    </script>
+    
+</body>
+</html>

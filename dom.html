@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple de modification de paragraphes et de centrage de h1</title>
+    <script>
+        // Fonction pour modifier le paragraphe
+        function modif_paragraphe() {
+            // Sélectionner le paragraphe par son identifiant
+            var paragraphe = document.getElementById("monParagraphe");
+            
+            // Vérifier si le paragraphe existe
+            if (paragraphe) {
+                // Remplacer le mot "original" par "corrigé" en italique
+                paragraphe.innerHTML = paragraphe.innerHTML.replace("original", "<i>corrigé</i>");
+            }
+        }
+
+        // Fonction pour centrer le titre h1
+        function centrage_h1() {
+            // Sélectionner tous les éléments h1 sur la page
+            var h1_elements = document.getElementsByTagName("h1");
+
+            // S'il y a des éléments h1
+            if (h1_elements.length > 0) {
+                // Sélectionner le premier élément h1
+                var premier_h1 = h1_elements[0];
+                
+                // Centrer le titre h1 en modifiant son attribut align
+                premier_h1.setAttribute("align", "center");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Titre h1 -->
+    <h1 onclick="centrage_h1()">Cliquez ici pour centrer</h1>
+
+    <!-- Paragraphe à modifier -->
+    <p id="monParagraphe">Ceci est un paragraphe contenant le mot "original".</p>
+
+    <!-- Bouton pour modifier le paragraphe -->
+    <button onclick="modif_paragraphe()">Modifier le paragraphe</button>
+</body>
+</html>
